@@ -2,7 +2,7 @@ import Image from 'next/image';
 import utilStyles from '../styles/utils.module.css';
 import styles from './layout.module.css';
 
-export default function Header({ home }) {
+export default function Header(props) {
   return (
     <header className={styles.header}>
       {(
@@ -15,7 +15,7 @@ export default function Header({ home }) {
             width={144}
             alt=""
           />
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          <h1 className={utilStyles.heading2Xl}>{props.name}</h1>
         </>
       )}
     </header>

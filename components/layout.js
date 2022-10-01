@@ -3,8 +3,10 @@ import styles from './layout.module.css';
 import Link from 'next/link';
 
 import Header from './header'
+import Footer from './footer'
 
 const name = 'Quick Ticker';
+const title = 'Footer';
 export const siteTitle = 'Quick Ticker';
 
 export default function Layout({ children, home }) {
@@ -26,9 +28,11 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <Header />
+      <Header name={name} />
 
       <main>{children}</main>
+
+      <Footer title={title} />
     </div>
   );
 }
